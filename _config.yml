@@ -1,7 +1,7 @@
 # Site settings
 title: DEB.SURY.ORG
 email: ondrej@sury.org
-tag_text: Debian and Ubuntu packaging
+# tag_text: Debian and Ubuntu packaging
 description: Debian and Ubuntu packaging
 baseurl: "" # the subpath of your site, e.g. /blog
 url: "https://deb.sury.org" # the base hostname & protocol for your site
@@ -14,4 +14,3 @@ font-awesome-include: true # make this false if you don't need font-awesome
 markdown: kramdown
 
 exclude: ["README.md"]
-
