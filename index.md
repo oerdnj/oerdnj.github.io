@@ -42,22 +42,14 @@ Also please excuse me if I don't respond to your email, my INBOX is really a mes
 
 ## Donate
 
-The PHP packaging is time consuming and I do this mostly in my free time.  Please consider donating if you find the PHP packages useful for your projects or your business.  It also warms a heart to know that this project is useful.
+The PHP packaging is time consuming and I do this mostly in my free time.  Please consider donating if you find the PHP packages useful for your projects.  It also warms a heart to know that this project is useful.
 
 Ways how to donate:
 
- * [Patreon](https://www.patreon.com/oerdnj) -- You can make period payments with Patreon.  Even small periodic amount are meanigful.
- * Bitcoin: 15WRQCrVHWUdcn3sbT7PF6u2FJGfbb8GW5
- * PayPal:
-
-<span>
-<form action="https://www.paypal.com/cgi-bin/webscr" method="post" target="_top">
-<input type="hidden" name="cmd" value="_s-xclick">
-<input type="hidden" name="encrypted" value="-----BEGIN PKCS7-----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-----END PKCS7-----">
-<input type="image" src="https://www.paypalobjects.com/en_US/i/btn/btn_donateCC_LG.gif" border="0" name="submit" alt="PayPal - The safer, easier way to pay online!">
-<img alt="pixel" border="0" src="https://www.paypalobjects.com/en_US/i/scr/pixel.gif" width="1" height="1">
-</form>
-</span>
+ * Become my regular patron on [Patreon](https://www.patreon.com/oerdnj)
+ * Send me some Bitcoins to 15WRQCrVHWUdcn3sbT7PF6u2FJGfbb8GW5
+ * Donate via [PayPal](https://www.paypal.com/cgi-bin/webscr?cmd=_donations&business=ondrej%40sury%2eorg&lc=CZ&item_name=DEB%2eSURY%2eORG&item_number=DEB%2eSURY%2eORG&currency_code=EUR&bn=PP%2dDonationsBF%3abtn_donate_SM%2egif%3aNonHosted)
+ * Contact me via [email](mailto:ondrej@sury.org?Donate%20to%20DEB.SURY.ORG) if you need something more special (like invoice)
 
 ## Contacts
 
