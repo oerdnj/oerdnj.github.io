@@ -2,45 +2,45 @@
 layout: default
 ---
 
-# Welcome to DEB.SURY.ORG
+## Welcome to DEB.SURY.ORG
 This is a home for packaging various software into Debian and Ubuntu.  Most notable package under DEB.SURY.ORG is the PHP packaging.
 
-# News
+## News
 
 I publish the most important changes in the packaging and interesting news in dedicated twitter feed:
 
 <a class=\"twitter-timeline\" data-dnt=\"true\" href=\"https://twitter.com/debsuryorg\" data-widget-id=\"720226114413707264\">Tweets by @debsuryorg</a>
 <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+\"://platform.twitter.com/widgets.js\";fjs.parentNode.insertBefore(js,fjs);}}(document,\"script\",\"twitter-wjs\");</script>
 
-# Packages
+## Packages
 
 All packaging work is either done directly in the Debian unstable, or it will be in the unstable sooner or later.
 
-## PHP Packages
+### PHP Packages
 
 The main repositories now contain both PHP 5.6 and PHP 7.0 coinstallable together.
 
-### Ubuntu PPA
+#### Ubuntu PPA
 
 * [ppa:ondrej/php](https://launchpad.net/~ondrej/+archive/ubuntu/php/) -- the main PHP repository
 * [ppa:ondrej/php5-5.6](https://launchpad.net/~ondrej/+archive/ubuntu/php5-5.6/) -- legacy PHP 5.6 packages
 * [ppa:ondrej/php5](https://launchpad.net/~ondrej/+archive/ubuntu/php5/) -- legacy PHP 5.5 packages
 
-### Debian DPA
+#### Debian DPA
 
 * [packages.sury.org/php](https://packages.sury.org/php/) -- the main PHP repository for Debian
 
-## Other packages
+### Other packages
 
 * [ppa:ondrej/courier](https://launchpad.net/~ondrej/+archive/ubuntu/courier/) -- Courier MTA packaging
 
-# Bug Reporting
+## Bug Reporting
 
 DEB.SURY.ORG has now public lightweight [issue tracker](https://github.com/oerdnj/deb.sury.org/issues) at github.com. Please report any bugs or feature requests for ppa:ondrej/* there, since my INBOX is a not very reliable way how to keep track on all issue since it has the tendency to grow number of unread messages to numbers over thousand...
 
 Also please excuse me if I don't respond to your email, my INBOX is really a mess and if you are not lucky, you might get stuck with other unread emails. So pretty please use new [issue tracker](https://github.com/oerdnj/deb.sury.org/issues).
 
-# Donate
+## Donate
 
 The PHP packaging is time consuming and I do this mostly in my free time.  Please consider donating if you find the PHP packages useful for your projects or your business.  It also warms a heart to know that this project is useful.
 

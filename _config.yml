@@ -1,7 +1,7 @@
 # Site settings
 title: DEB.SURY.ORG
 email: ondrej@sury.org
-# tag_text: Debian and Ubuntu packaging
+tag_text: Debian and Ubuntu packaging
 description: Debian and Ubuntu packaging
 baseurl: "" # the subpath of your site, e.g. /blog
 url: "" # the base hostname & protocol for your site
