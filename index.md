@@ -45,9 +45,9 @@ Also please excuse me if I don't respond to your email, my INBOX is really a mes
 The PHP packaging is time consuming and I do this mostly in my free time.  Please consider donating if you find the PHP packages useful for your projects or your business.  It also warms a heart to know that this project is useful.
 
 Ways how to donate:
-* [Patreon](https://www.patreon.com/oerdnj) -- You can make period payments with Patreon.  Even small periodic amount are meanigful.
-* Bitcoin: 15WRQCrVHWUdcn3sbT7PF6u2FJGfbb8GW5
-* PayPal:
+ * [Patreon](https://www.patreon.com/oerdnj) -- You can make period payments with Patreon.  Even small periodic amount are meanigful.
+ * Bitcoin: 15WRQCrVHWUdcn3sbT7PF6u2FJGfbb8GW5
+ * PayPal:
 
 <span>
 <form action="https://www.paypal.com/cgi-bin/webscr" method="post" target="_top">
@@ -57,4 +57,3 @@ Ways how to donate:
 <img alt="pixel" border="0" src="https://www.paypalobjects.com/en_US/i/scr/pixel.gif" width="1" height="1">
 </form>
 </span>
-
