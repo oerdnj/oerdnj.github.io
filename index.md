@@ -2,67 +2,59 @@
 layout: default
 ---
 
-## A Jekyll template for publishing single-page websites and articles that are incredibly readable and fully responsive
+# Welcome to DEB.SURY.ORG
+This is a home for packaging various software into Debian and Ubuntu.  Most notable package under DEB.SURY.ORG is the PHP packaging.
 
-### Nice, clean, reading!
+# News
 
-Good clean read is set up with readability first in mind. Whatever you want to communicate here can be read easily, and without distraction. Of course, it's fully responsive, which means people can read it naturally on any phone, or tablet. Write it in markdown in <code>index.md</code> and get a beautifully published piece.
+I publish the most important changes in the packaging and interesting news in dedicated twitter feed:
 
-Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+<a class=\"twitter-timeline\" data-dnt=\"true\" href=\"https://twitter.com/debsuryorg\" data-widget-id=\"720226114413707264\">Tweets by @debsuryorg</a>
+<script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+\"://platform.twitter.com/widgets.js\";fjs.parentNode.insertBefore(js,fjs);}}(document,\"script\",\"twitter-wjs\");</script>
 
-> "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+# Packages
 
-### With footnotes too!
+All packaging work is either done directly in the Debian unstable, or it will be in the unstable sooner or later.
 
-Back up your stuff with solid, clean citations. Footnotes can be written in markdown and appear like this.[^1] Use as many as you like.[^2]
+## PHP Packages
 
-Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+The main repositories now contain both PHP 5.6 and PHP 7.0 coinstallable together.
 
-### Add social sharing buttons
+### Ubuntu PPA
 
-Simply add the following line anywhere in your markdown:
+* [ppa:ondrej/php](https://launchpad.net/~ondrej/+archive/ubuntu/php/) -- the main PHP repository
+* [ppa:ondrej/php5-5.6](https://launchpad.net/~ondrej/+archive/ubuntu/php5-5.6/) -- legacy PHP 5.6 packages
+* [ppa:ondrej/php5](https://launchpad.net/~ondrej/+archive/ubuntu/php5/) -- legacy PHP 5.5 packages
 
-<pre><code>{% raw  %}
-{% include sharing.html %}
-{% endraw %}
-</code></pre>
+### Debian DPA
 
-and get a nice responsive sharing ribbon.
+* [packages.sury.org/php](https://packages.sury.org/php/) -- the main PHP repository for Debian
 
-{% include sharing.html %}
+## Other packages
 
-Add this at the bottom, or the top, or between every other paragraph if you're desprate for social validation.
+* [ppa:ondrej/courier](https://launchpad.net/~ondrej/+archive/ubuntu/courier/) -- Courier MTA packaging
 
-Just remember to customize the buttons to fit your url in the `_includes/sharing.html` file. These buttons are made available and customizable by the good folks at kni-labs. See the documentation at [https://github.com/kni-labs/rrssb](https://github.com/kni-labs/rrssb) for more information.
+# Bug Reporting
 
-### Font awesome is also included
+DEB.SURY.ORG has now public lightweight [issue tracker](https://github.com/oerdnj/deb.sury.org/issues) at github.com. Please report any bugs or feature requests for ppa:ondrej/* there, since my INBOX is a not very reliable way how to keep track on all issue since it has the tendency to grow number of unread messages to numbers over thousand...
 
-<i class="fa fa-quote-left fa-3x fa-pull-left fa-border"></i> Now you can use all the cool icons you want! [Font Awesome](http://fontawesome.io) is indeed awesome. But wait, you don't need this sweetness and you don't want that little bit of load time from the font awesome css? No problem, just disable it in the `config.yml` file, and it won't be loaded.
+Also please excuse me if I don't respond to your email, my INBOX is really a mess and if you are not lucky, you might get stuck with other unread emails. So pretty please use new [issue tracker](https://github.com/oerdnj/deb.sury.org/issues).
 
-<ul class="fa-ul">
-  <li><i class="fa-li fa fa-check-square"></i>you can make lists...</li>
-  <li><i class="fa-li fa fa-check-square-o"></i>with cool icons like this,</li>
-  <li><i class="fa-li fa fa-spinner fa-spin"></i>even ones that move!</li>
-</ul>
+# Donate
 
-If you need them, you can stick any of the [605 icons](http://fontawesome.io/icons/) anywhere, with any size you like. ([See documentation](http://fontawesome.io/examples/))
+The PHP packaging is time consuming and I do this mostly in my free time.  Please consider donating if you find the PHP packages useful for your projects or your business.  It also warms a heart to know that this project is useful.
 
-<i class="fa fa-building"></i>&nbsp;&nbsp;<i class="fa fa-bus fa-lg"></i>&nbsp;&nbsp;<i class="fa fa-cube fa-2x"></i>&nbsp;&nbsp;<i class="fa fa-paper-plane fa-3x"></i>&nbsp;&nbsp;<i class="fa fa-camera-retro fa-4x">
+Ways how to donate:
+* [Patreon](https://www.patreon.com/oerdnj) -- You can make period payments with Patreon.  Even small periodic amount are meanigful.
+* Bitcoin: 15WRQCrVHWUdcn3sbT7PF6u2FJGfbb8GW5
+* PayPal:
 
-### Add images to make your point
+<span>
+<form action=\"https://www.paypal.com/cgi-bin/webscr\" method=\"post\" target=\"_top\">
+<input type=\"hidden\" name=\"cmd\" value=\"_s-xclick\">
+<input type=\"hidden\" name=\"encrypted\" value=\"-----BEGIN PKCS7-----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-----END PKCS7-----\">
+<input type=\"image\" src=\"https://www.paypalobjects.com/en_US/i/btn/btn_donateCC_LG.gif\" border=\"0\" name=\"submit\" alt=\"PayPal - The safer, easier way to pay online!\">
+<img alt=\"pixel\" border=\"0\" src=\"https://www.paypalobjects.com/en_US/i/scr/pixel.gif\" width=\"1\" height=\"1\">
+</form>
+</span>
 
-Images play nicely with this template as well. Add diagrams or charts to make your point, and the template will fit them in appropriately.
-
-<img src="images/hello.svg" alt="sample image">
-
-Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
-
-Thanks to [Shu Uesengi](https://github.com/chibicode) for inspiring and providing the base for this template with his excellent work, [solo](https://github.com/chibicode).
-
-<hr>
-
-##### Footnotes:
-
-[^1]: This is a footnote. Click to return.
-
-[^2]: Here is another.
