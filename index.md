@@ -2,7 +2,7 @@
 layout: default
 ---
 
-## Welcome to DEB.SURY.ORG
+## About
 This is a home for packaging various software into Debian and Ubuntu.  Most notable package under DEB.SURY.ORG is the PHP packaging.
 
 ## News
