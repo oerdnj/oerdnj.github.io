@@ -1,124 +1,23 @@
-<!doctype html>
-<html>
-  <head>
-    <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="chrome=1">
-    <title>DEB.SURY.ORG by oerdnj</title>
+---
+layout: default
+---
 
-    <link rel="stylesheet" href="stylesheets/styles.css">
-    <link rel="stylesheet" href="stylesheets/github-light.css">
-    <script src="javascripts/scale.fix.js"></script>
-    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
-    <!--[if lt IE 9]>
-    <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
-    <![endif]-->
-  </head>
-  <body>
-    <div class="wrapper">
-      <header>
-        <h1 class="header">DEB.SURY.ORG</h1>
-        <p class="header">Debian and Ubuntu Packaging</p>
+<div class="home">
 
-        <ul>
-          <li class="download"><a class="buttons" href="https://github.com/oerdnj/deb.sury.org/zipball/master">Download ZIP</a></li>
-          <li class="download"><a class="buttons" href="https://github.com/oerdnj/deb.sury.org/tarball/master">Download TAR</a></li>
-          <li><a class="buttons github" href="https://github.com/oerdnj/deb.sury.org">View On GitHub</a></li>
-        </ul>
+  <h1 class="page-heading">Posts</h1>
 
-        <p class="header">This project is maintained by <a class="header name" href="https://github.com/oerdnj">oerdnj</a></p>
+  <ul class="post-list">
+    {% for post in site.posts %}
+      <li>
+        <span class="post-meta">{{ post.date | date: "%b %-d, %Y" }}</span>
 
+        <h2>
+          <a class="post-link" href="{{ post.url | prepend: site.baseurl }}">{{ post.title }}</a>
+        </h2>
+      </li>
+    {% endfor %}
+  </ul>
 
-      </header>
-      <section>
-        <h1>
-<a id="welcome-to-debsuryorg" class="anchor" href="#welcome-to-debsuryorg" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Welcome to DEB.SURY.ORG</h1>
+  <p class="rss-subscribe">subscribe <a href="{{ "/feed.xml" | prepend: site.baseurl }}">via RSS</a></p>
 
-<p>This is a home for packaging various software into Debian and Ubuntu.  Most notable package under DEB.SURY.ORG is the PHP packaging.</p>
-
-<h1>
-<a id="news" class="anchor" href="#news" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>News</h1>
-
-<p>I publish the most important changes in the packaging and interesting news in dedicated twitter feed:</p>
-
-<p><a href="https://twitter.com/debsuryorg">Tweets by @debsuryorg</a></p>
-
-
-
-<h1>
-<a id="packages" class="anchor" href="#packages" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Packages</h1>
-
-<p>All packaging work is either done directly in the Debian unstable, or it will be in the unstable sooner or later.</p>
-
-<h2>
-<a id="php-packages" class="anchor" href="#php-packages" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>PHP Packages</h2>
-
-<p>The main repositories now contain both PHP 5.6 and PHP 7.0 coinstallable together.</p>
-
-<h3>
-<a id="ubuntu-ppa" class="anchor" href="#ubuntu-ppa" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Ubuntu PPA</h3>
-
-<ul>
-<li>
-<a href="https://launchpad.net/%7Eondrej/+archive/ubuntu/php/">ppa:ondrej/php</a> -- the main PHP repository</li>
-<li>
-<a href="https://launchpad.net/%7Eondrej/+archive/ubuntu/php5-5.6/">ppa:ondrej/php5-5.6</a> -- legacy PHP 5.6 packages</li>
-<li>
-<a href="https://launchpad.net/%7Eondrej/+archive/ubuntu/php5/">ppa:ondrej/php5</a> -- legacy PHP 5.5 packages</li>
-</ul>
-
-<h3>
-<a id="debian-dpa" class="anchor" href="#debian-dpa" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Debian DPA</h3>
-
-<ul>
-<li>
-<a href="https://packages.sury.org/php/">packages.sury.org/php</a> -- the main PHP repository for Debian</li>
-</ul>
-
-<h2>
-<a id="other-packages" class="anchor" href="#other-packages" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Other packages</h2>
-
-<ul>
-<li>
-<a href="https://launchpad.net/%7Eondrej/+archive/ubuntu/courier/">ppa:ondrej/courier</a> -- Courier MTA packaging</li>
-</ul>
-
-<h1>
-<a id="bug-reporting" class="anchor" href="#bug-reporting" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Bug Reporting</h1>
-
-<p>DEB.SURY.ORG has now public lightweight <a href="https://github.com/oerdnj/deb.sury.org/issues">issue tracker</a> at github.com. Please report any bugs or feature requests for ppa:ondrej/* there, since my INBOX is a not very reliable way how to keep track on all issue since it has the tendency to grow number of unread messages to numbers over thousand...</p>
-
-<p>Also please excuse me if I don't respond to your email, my INBOX is really a mess and if you are not lucky, you might get stuck with other unread emails. So pretty please use new <a href="https://github.com/oerdnj/deb.sury.org/issues">issue tracker</a>.</p>
-
-<h1>
-<a id="donate" class="anchor" href="#donate" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Donate</h1>
-
-<p>The PHP packaging is time consuming and I do this mostly in my free time.  Please consider donating if you find the PHP packages useful for your projects or your business.  It also warms a heart to know that this project is useful.</p>
-
-<p>Ways how to donate:</p>
-
-<ul>
-<li>
-<a href="https://www.patreon.com/oerdnj">Patreon</a> -- You can make period payments with Patreon.  Even small periodic amount are meanigful.</li>
-<li>Bitcoin: 15WRQCrVHWUdcn3sbT7PF6u2FJGfbb8GW5</li>
-<li>PayPal: </li>
-</ul>
-
-<p></p>
-
-
-
-
-
-<img alt="pixel" border="0" src="https://www.paypalobjects.com/en_US/i/scr/pixel.gif" width="1" height="1">
-
-
-<p></p>
-      </section>
-      <footer>
-        <p><small>Hosted on <a href="https://pages.github.com">GitHub Pages</a> using the Dinky theme</small></p>
-      </footer>
-    </div>
-    <!--[if !IE]><script>fixScale(document);</script><![endif]-->
-		
-  </body>
-</html>
+</div>
