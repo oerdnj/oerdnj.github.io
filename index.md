@@ -40,6 +40,10 @@ DEB.SURY.ORG has now public lightweight [issue tracker](https://github.com/oerdn
 
 Also please excuse me if I don't respond to your email, my INBOX is really a mess and if you are not lucky, you might get stuck with other unread emails. So pretty please use new [issue tracker](https://github.com/oerdnj/deb.sury.org/issues).
 
+## Documentation
+
+The available documentation related to the packages and PPAs is hosted in the [Wiki](https://github.com/oerdnj/deb.sury.org/wiki).  Everybody can contribute, so if you want to write more documentations on the PHP packages, you are certainly welcome to do so.
+
 ## Donate
 
 The PHP packaging is time consuming and I do this mostly in my free time.  Please consider donating if you find the PHP packages useful for your projects.  It also warms a heart to know that this project is useful.
