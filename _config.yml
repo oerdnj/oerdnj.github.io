@@ -14,3 +14,5 @@ font-awesome-include: true # make this false if you don't need font-awesome
 markdown: kramdown
 
 exclude: ["README.md"]
+
+theme: jekyll-theme-minimal
