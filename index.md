@@ -23,16 +23,10 @@ The main repositories now contain both PHP 5.6 and PHP 7.0 coinstallable togethe
 #### Ubuntu PPA
 
 * [ppa:ondrej/php](https://launchpad.net/~ondrej/+archive/ubuntu/php/) -- the main PHP repository
-* [ppa:ondrej/php5-5.6](https://launchpad.net/~ondrej/+archive/ubuntu/php5-5.6/) -- legacy PHP 5.6 packages
-* [ppa:ondrej/php5](https://launchpad.net/~ondrej/+archive/ubuntu/php5/) -- legacy PHP 5.5 packages
 
 #### Debian DPA
 
 * [packages.sury.org/php](https://packages.sury.org/php/) -- the main PHP repository for Debian
-
-### Other packages
-
-* [ppa:ondrej/courier](https://launchpad.net/~ondrej/+archive/ubuntu/courier/) -- Courier MTA packaging
 
 ## Bug Reporting
 
