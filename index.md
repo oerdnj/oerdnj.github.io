@@ -5,6 +5,14 @@ layout: default
 ## About
 This is a home for packaging various software into Debian and Ubuntu.  Most notable package under DEB.SURY.ORG is the PHP packaging.
 
+## Who am I?
+
+I am a Debian Developer since year 2000, and I have been packaging PHP for
+Debian since PHP 5.  That means the official packages in Debian and Ubuntu are
+either my work or they are based on my work.  The PHP packages in my Ubuntu PPA
+and Debian DPA matches the official packages in Debian.  Basically I am saying
+that you can't get any closer than that.
+
 ## News
 
 I publish the most important changes in the packaging and interesting news in dedicated twitter feed:
