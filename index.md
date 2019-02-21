@@ -57,6 +57,10 @@ Ways how to donate:
  * Donate via [PayPal](https://www.paypal.com/cgi-bin/webscr?cmd=_donations&business=ondrej%40sury%2eorg&lc=CZ&item_name=DEB%2eSURY%2eORG&item_number=DEB%2eSURY%2eORG&currency_code=EUR&bn=PP%2dDonationsBF%3abtn_donate_SM%2egif%3aNonHosted)
  * Contact me via [email](mailto:ondrej@sury.org?Donate%20to%20DEB.SURY.ORG) if you need something more special (like invoice)
 
+## Sponsors
+
+* [Powered by KeyCDN](https://www.keycdn.com)
+
 ## Contacts
 
 {% include sharing.html %}
