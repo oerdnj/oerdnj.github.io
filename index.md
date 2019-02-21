@@ -59,7 +59,7 @@ Ways how to donate:
 
 ## Sponsors
 
-* [Powered by KeyCDN](https://www.keycdn.com)
+* Debian DPA is [Powered by KeyCDN](https://www.keycdn.com)
 
 ## Contacts
 
