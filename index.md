@@ -15,18 +15,21 @@ that you can't get any closer than that.
 
 ## News
 
-I publish the most important changes in the packaging and interesting news in dedicated twitter feed:
+I publish the most important changes in the packaging and interesting news in
+dedicated twitter feed:
 
 <a class="twitter-timeline" data-dnt="true" href="https://twitter.com/debsuryorg" data-widget-id="720226114413707264">Tweets by @debsuryorg</a>
 <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+"://platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");</script>
 
 ## Packages
 
-All packaging work is either done directly in the Debian unstable, or it will be in the unstable sooner or later.
+All packaging work is either done directly in the Debian unstable, or it will be
+in the unstable sooner or later.
 
 ### PHP Packages
 
-The main repositories now contain both PHP 5.6 and PHP 7.0 coinstallable together.
+The main repositories now contain both PHP 5.6, PHP 7.0-7.4 and PHP 8.0
+coinstallable together.
 
 #### Ubuntu PPA
 
@@ -36,30 +39,51 @@ The main repositories now contain both PHP 5.6 and PHP 7.0 coinstallable togethe
 
 * [packages.sury.org/php](https://packages.sury.org/php/) -- the main PHP repository for Debian
 
+#### Freexian Repository for Debian Jessie
+
+* [PHP LTS by Freexian](https://php.freexian.com) -- PHP LTS repository for Debian ELTS (Debian Jessie) prepared together with [Freexian](https://www.freexian.com)
+
 ## Bug Reporting
 
-DEB.SURY.ORG has now public lightweight [issue tracker](https://github.com/oerdnj/deb.sury.org/issues) at github.com. Please report any bugs or feature requests for ppa:ondrej/* there, since my INBOX is a not very reliable way how to keep track on all issue since it has the tendency to grow number of unread messages to numbers over thousand...
+DEB.SURY.ORG has now public lightweight [issue tracker](https://github.com/oerdnj/deb.sury.org/issues)
+at github.com. Please report any bugs or feature requests for the repositories
+there, since my INBOX is a not very reliable way how to keep track on all issue
+since it has the tendency to grow number of unread messages to numbers over
+thousand...
 
-Also please excuse me if I don't respond to your email, my INBOX is really a mess and if you are not lucky, you might get stuck with other unread emails. So pretty please use new [issue tracker](https://github.com/oerdnj/deb.sury.org/issues).
+Also please excuse me if I don't respond to your email, my INBOX is really a
+mess and if you are not lucky, you might get stuck with other unread emails. So
+pretty please use new [issue tracker](https://github.com/oerdnj/deb.sury.org/issues).
 
 ## Documentation
 
-The available documentation related to the packages and PPAs is hosted in the [Wiki](https://github.com/oerdnj/deb.sury.org/wiki).  Everybody can contribute, so if you want to write more documentations on the PHP packages, you are certainly welcome to do so.
+The available documentation related to the packages and PPAs is hosted in the
+[Wiki](https://github.com/oerdnj/deb.sury.org/wiki).  Everybody can contribute,
+so if you want to write more documentations on the PHP packages, you are
+certainly welcome to do so.
 
 ## Donate
 
-The PHP packaging is time consuming and I do this mostly in my free time.  Please consider donating if you find the PHP packages useful for your projects.  It also warms a heart to know that this project is useful.
+The PHP packaging is time consuming and I do this mostly in my free time.
+Please consider donating if you find the PHP packages useful for your projects.
+It also warms a heart to know that this project is useful.
 
 Ways how to donate:
 
  * Become my regular patron on [Patreon](https://www.patreon.com/oerdnj)
+ * Become my regular sponsor on [GitHub](https://github.com/sponsors/oerdnj)
  * Send me some Bitcoins to 15WRQCrVHWUdcn3sbT7PF6u2FJGfbb8GW5
+ * Send me some Monero to 82ii7wwhY9tagXuvJ5xAxqJg93EwLwPbfNzNcmYa9zcUArvyA3Ub5y52vXAvHJa1qq711VR9ZAHgQNHCe2jh2HdeRXFf16W
  * Donate via [PayPal](https://www.paypal.com/cgi-bin/webscr?cmd=_donations&business=ondrej%40sury%2eorg&lc=CZ&item_name=DEB%2eSURY%2eORG&item_number=DEB%2eSURY%2eORG&currency_code=EUR&bn=PP%2dDonationsBF%3abtn_donate_SM%2egif%3aNonHosted)
  * Contact me via [email](mailto:ondrej@sury.org?Donate%20to%20DEB.SURY.ORG) if you need something more special (like invoice)
 
 ## Sponsors
 
-* [Debian DPA](https://packages.sury.org/php/) is [Powered by KeyCDN](https://www.keycdn.com)
+This section is dedicated to individuals and companies who contribute more than
+$100 a month, see the [Patreon](https://www.patreon.com/oerdnj) or [GitHub](https://github.com/sponsors/oerdnj) tiers.
+
+* [Laravel](https://laravel.com) - The PHP Framework for Web Artisans
+* [Stepan Kocourek](https://kocourek.uk)
 
 ## Contacts
 
