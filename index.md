@@ -39,9 +39,9 @@ coinstallable together.
 
 * [packages.sury.org/php](https://packages.sury.org/php/) -- the main PHP repository for Debian
 
-#### Freexian Repository for Debian Jessie
+#### Freexian Repository for Debian Jessie and Debian Stretch
 
-* [PHP LTS by Freexian](https://php.freexian.com) -- PHP LTS repository for Debian ELTS (Debian Jessie) prepared together with [Freexian](https://www.freexian.com)
+* [PHP LTS by Freexian](https://php.freexian.com) -- PHP LTS repository for Debian ELTS (Debian Jessie) and Debian LTS (Debian Stretch) prepared together with [Freexian](https://www.freexian.com)
 
 ## Bug Reporting
 
@@ -80,10 +80,13 @@ Ways how to donate:
 ## Sponsors
 
 This section is dedicated to individuals and companies who contribute more than
-$100 a month, see the [Patreon](https://www.patreon.com/oerdnj) or [GitHub](https://github.com/sponsors/oerdnj) tiers.
+$100 a month or made a significant contribution in a given calendar year, see the [Patreon](https://www.patreon.com/oerdnj) or [GitHub](https://github.com/sponsors/oerdnj) tiers.
 
 * [Laravel](https://laravel.com) - The PHP Framework for Web Artisans
 * [Stepan Kocourek](https://kocourek.uk)
+* [root360](https://www.root360.de)
+* [Onlime](https://www.onlime.ch/en/)
+* [Intracto](https://www.intracto.com)
 
 ## Contacts
 
