@@ -87,6 +87,7 @@ $100 a month or made a significant contribution in a given calendar year, see th
 * [root360](https://www.root360.de)
 * [Onlime](https://www.onlime.ch/en/)
 * [Intracto](https://www.intracto.com)
+* [qwertiko](https://www.qwertiko.de)
 
 ## Contacts
 
