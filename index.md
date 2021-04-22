@@ -88,6 +88,7 @@ $100 a month or made a significant contribution in a given calendar year, see th
 * [Onlime](https://www.onlime.ch/en/)
 * [Intracto](https://www.intracto.com)
 * [qwertiko](https://www.qwertiko.de)
+* [SysEleven](https://www.syseleven.de) - Managed Kubernetes – Made in Germany
 
 ## Contacts
 
