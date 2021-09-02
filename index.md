@@ -39,9 +39,9 @@ coinstallable together.
 
 * [packages.sury.org/php](https://packages.sury.org/php/) -- the main PHP repository for Debian
 
-#### Freexian Repository for Debian Jessie and Debian Stretch
+#### Freexian Repository for Debian Jessie, Stretch, Buster and Bullseye and Ubuntu Xenial
 
-* [PHP LTS by Freexian](https://php.freexian.com) -- PHP LTS repository for Debian ELTS (Debian Jessie) and Debian LTS (Debian Stretch) prepared together with [Freexian](https://www.freexian.com)
+* [PHP LTS by Freexian](https://php.freexian.com) -- PHP LTS repository prepared together with [Freexian](https://www.freexian.com) with commercial support
 
 ## Bug Reporting
 
@@ -62,11 +62,18 @@ The available documentation related to the packages and PPAs is hosted in the
 so if you want to write more documentations on the PHP packages, you are
 certainly welcome to do so.
 
-## Donate
+## Support
 
 The PHP packaging is time consuming and I do this mostly in my free time.
-Please consider donating if you find the PHP packages useful for your projects.
+Please consider buying commercial support from Freexian if you use PHP packages
+to run business or donating donating if you find the PHP packages useful for
+your projects. 
+
 It also warms a heart to know that this project is useful.
+
+Commercial support:
+
+ * [PHP LTS by Freexian](https://php.freexian.com/)
 
 Ways how to donate:
 
@@ -76,6 +83,13 @@ Ways how to donate:
  * Send me some Monero to 82ii7wwhY9tagXuvJ5xAxqJg93EwLwPbfNzNcmYa9zcUArvyA3Ub5y52vXAvHJa1qq711VR9ZAHgQNHCe2jh2HdeRXFf16W
  * Donate via [PayPal](https://www.paypal.com/cgi-bin/webscr?cmd=_donations&business=ondrej%40sury%2eorg&lc=CZ&item_name=DEB%2eSURY%2eORG&item_number=DEB%2eSURY%2eORG&currency_code=EUR&bn=PP%2dDonationsBF%3abtn_donate_SM%2egif%3aNonHosted)
  * Contact me via [email](mailto:ondrej@sury.org?Donate%20to%20DEB.SURY.ORG) if you need something more special (like invoice)
+
+## Acknowledgements
+
+This service would not exist without the support from companies that trust us and support the project via [PHP LTS by Freexian](https://php.freexian.com/). Many thanks to them!
+
+![TOUCHWEB](https://php.freexian.com/logos/TouchWeb.png)
+![MaxCluster](https://php.freexian.com/logos/Maxcluster.png)
 
 ## Sponsors
 
@@ -89,7 +103,6 @@ $100 a month or made a significant contribution in a given calendar year, see th
 * [Intracto](https://www.intracto.com)
 * [qwertiko](https://www.qwertiko.de)
 * [SysEleven](https://www.syseleven.de) - Managed Kubernetes – Made in Germany
-* [TOUCHWEB](https://www.touchweb.fr)
 
 ## Contacts
 
