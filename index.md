@@ -88,8 +88,8 @@ Ways how to donate:
 
 This service would not exist without the support from companies that trust us and support the project via [PHP LTS by Freexian](https://php.freexian.com/). Many thanks to them!
 
-![TOUCHWEB](https://php.freexian.com/logos/TouchWeb.png)
-![MaxCluster](https://php.freexian.com/logos/Maxcluster.png)
+[![TOUCHWEB](https://php.freexian.com/logos/TouchWeb.png)](https://www.touchweb.fr/)
+[![MaxCluster](https://php.freexian.com/logos/Maxcluster.png)](https://maxcluster.de/)
 
 ## Sponsors
 
