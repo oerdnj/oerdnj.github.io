@@ -103,6 +103,8 @@ $100 a month or made a significant contribution in a given calendar year, see th
 * [Intracto](https://www.intracto.com)
 * [qwertiko](https://www.qwertiko.de)
 * [SysEleven](https://www.syseleven.de) - Managed Kubernetes – Made in Germany
+* [CanTrust](https://cantrusthosting.coop/) - Trusted Canadian web hosting
+* [Vultr](https://www.vultr.com/) - The Infrastructure Cloud™
 
 ## Contacts
 
