@@ -79,8 +79,6 @@ Ways how to donate:
 
  * Become my regular patron on [Patreon](https://www.patreon.com/oerdnj)
  * Become my regular sponsor on [GitHub](https://github.com/sponsors/oerdnj)
- * Send me some Bitcoins to 15WRQCrVHWUdcn3sbT7PF6u2FJGfbb8GW5
- * Send me some Monero to 82ii7wwhY9tagXuvJ5xAxqJg93EwLwPbfNzNcmYa9zcUArvyA3Ub5y52vXAvHJa1qq711VR9ZAHgQNHCe2jh2HdeRXFf16W
  * Donate via [PayPal](https://www.paypal.com/cgi-bin/webscr?cmd=_donations&business=ondrej%40sury%2eorg&lc=CZ&item_name=DEB%2eSURY%2eORG&item_number=DEB%2eSURY%2eORG&currency_code=EUR&bn=PP%2dDonationsBF%3abtn_donate_SM%2egif%3aNonHosted)
  * Contact me via [email](mailto:ondrej@sury.org?Donate%20to%20DEB.SURY.ORG) if you need something more special (like invoice)
 
