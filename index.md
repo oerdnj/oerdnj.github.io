@@ -98,7 +98,7 @@ $100 a month or made a significant contribution in a given calendar year, see th
 * [Stepan Kocourek](https://kocourek.uk)
 * [root360](https://www.root360.de)
 * [Onlime](https://www.onlime.ch/en/)
-* [Intracto](https://www.intracto.com)
+* [iO](https://www.iodigital.com/en)
 * [qwertiko](https://www.qwertiko.de)
 * [SysEleven](https://www.syseleven.de) - Managed Kubernetes – Made in Germany
 * [CanTrust](https://cantrusthosting.coop/) - Trusted Canadian web hosting
