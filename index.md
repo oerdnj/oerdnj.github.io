@@ -41,7 +41,7 @@ coinstallable together.
 
 #### Freexian Repository for Debian Jessie, Stretch, Buster and Bullseye and Ubuntu Xenial
 
-* [PHP LTS by Freexian](https://php.freexian.com) -- PHP LTS repository prepared together with [Freexian](https://www.freexian.com) with commercial support
+* [PHP LTS by Freexian](https://www.freexian.com/lts/php/) -- PHP LTS repository prepared together with [Freexian](https://www.freexian.com) with commercial support
 
 ## Bug Reporting
 
@@ -73,7 +73,7 @@ It also warms a heart to know that this project is useful.
 
 Commercial support:
 
- * [PHP LTS by Freexian](https://php.freexian.com/)
+ * [PHP LTS by Freexian](https://www.freexian.com/lts/php/)
 
 Ways how to donate:
 
@@ -84,10 +84,10 @@ Ways how to donate:
 
 ## Acknowledgements
 
-This service would not exist without the support from companies that trust us and support the project via [PHP LTS by Freexian](https://php.freexian.com/). Many thanks to them!
+This service would not exist without the support from companies that trust us and support the project via [PHP LTS by Freexian](https://www.freexian.com/lts/php/). Many thanks to them!
 
-[![TOUCHWEB](https://php.freexian.com/logos/TouchWeb.png)](https://www.touchweb.fr/)
-[![MaxCluster](https://php.freexian.com/logos/Maxcluster.png)](https://maxcluster.de/)
+[![TOUCHWEB](https://www.freexian.com/lts/php/logos/TouchWeb.png)](https://www.touchweb.fr/)
+[![MaxCluster](https://www.freexian.com/lts/php/logos/Maxcluster.png)](https://maxcluster.de/)
 
 ## Sponsors
 
