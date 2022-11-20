@@ -5,7 +5,6 @@ tag_text: DEB.SURY.ORG
 description: Debian and Ubuntu packaging
 baseurl: "" # the subpath of your site, e.g. /blog
 url: "https://deb.sury.org" # the base hostname & protocol for your site
-twitter_username: oerdnj
 github_username:  oerdnj
 
 font-awesome-include: true # make this false if you don't need font-awesome
