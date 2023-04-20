@@ -100,3 +100,4 @@ $100 a month or made a significant contribution in a given calendar year, see th
 * [SysEleven](https://www.syseleven.de) - Managed Kubernetes – Made in Germany
 * [CanTrust](https://cantrusthosting.coop/) - Trusted Canadian web hosting
 * [Vultr](https://www.vultr.com/) - The Infrastructure Cloud™
+* [BlackHost](https://black.host) - Unmetered web hosting company
