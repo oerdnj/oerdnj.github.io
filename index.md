@@ -34,7 +34,7 @@ coinstallable together.
 
 #### Debian DPA
 
-* [packages.sury.org/php](https://packages.sury.org/php/) -- the main PHP repository for Debian
+* [packages.sury.org/php](https://packages.sury.org/php/README.txt) -- the main PHP repository for Debian
 
 #### Freexian Repository for Debian Jessie, Stretch, Buster and Bullseye and Ubuntu Xenial
 
