@@ -101,3 +101,4 @@ $100 a month or made a significant contribution in a given calendar year, see th
 * [CanTrust](https://cantrusthosting.coop/) - Trusted Canadian web hosting
 * [Vultr](https://www.vultr.com/) - The Infrastructure Cloud™
 * [BlackHost](https://black.host) - Unmetered web hosting company
+* [Mythic Beasts](https://www.mythic-beasts.com)
