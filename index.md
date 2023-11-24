@@ -25,7 +25,7 @@ in the unstable sooner or later.
 
 ### PHP Packages
 
-The main repositories now contain both PHP 5.6, PHP 7.0-7.4 and PHP 8.0-8.2
+The main repositories now contain both PHP 5.6, PHP 7.0-7.4 and PHP 8.0-8.3
 coinstallable together.
 
 #### Ubuntu PPA
