@@ -83,8 +83,9 @@ Ways how to donate:
 
 This service would not exist without the support from companies that trust us and support the project via [PHP LTS by Freexian](https://www.freexian.com/lts/php/). Many thanks to them!
 
-[![TouchWeb - Comment éviter piratage PrestaShop](https://www.freexian.com/lts/php/logos/TouchWeb.png)](https://www.touchweb.fr/)
-[![MaxCluster](https://www.freexian.com/lts/php/logos/Maxcluster.png)](https://maxcluster.de/)
+[![TouchWeb - Comment éviter piratage PrestaShop](/images/TouchWeb.png)](https://www.touchweb.fr/)
+[![MaxCluster](/images/Maxcluster.png)](https://maxcluster.de/)
+[![Fastly - Building a better internet for all](/images/fastlyLogo-white-SVG.svg)](https://www.fastly.com/fast-forward)
 
 ## Sponsors
 
