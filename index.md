@@ -85,7 +85,7 @@ This service would not exist without the support from companies that trust us an
 
 [![TouchWeb - Comment éviter piratage PrestaShop](/images/TouchWeb.png)](https://www.touchweb.fr/)
 [![MaxCluster](/images/Maxcluster.png)](https://maxcluster.de/)
-[![Fastly - Building a better internet for all](/images/fastlyLogo-white-PNG.png)](https://www.fastly.com/fast-forward)
+[![Fastly - Building a better internet for all](/images/fastlyLogo-red-PNG.png)](https://www.fastly.com/fast-forward)
 [![Internet Systems Consortium](/images/ISC-logo-for-web.png)](https://www.isc.org/support/)
 
 ## Sponsors
