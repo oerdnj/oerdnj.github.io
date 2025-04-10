@@ -81,10 +81,11 @@ Ways how to donate:
 
 ## Acknowledgements
 
-This service would not exist without the support from companies that trust us and support the project via [PHP LTS by Freexian](https://www.freexian.com/lts/php/). Many thanks to them!
+This service would not exist without the support from companies that trust us and support the project directly or via [PHP LTS by Freexian](https://www.freexian.com/lts/php/). Many thanks to them!
 
 [![TouchWeb - Comment éviter piratage PrestaShop](/images/TouchWeb.png)](https://www.touchweb.fr/)
 [![MaxCluster](/images/Maxcluster.png)](https://maxcluster.de/)
+[![Kinsta](/images/Kinsta_black.jpg)](https://kinsta.com)
 [![Fastly - Building a better internet for all](/images/fastlyLogo-red-PNG.png)](https://www.fastly.com/fast-forward)
 [![Internet Systems Consortium](/images/ISC-logo-for-web.png)](https://www.isc.org/support/)
 
