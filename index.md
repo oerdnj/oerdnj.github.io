@@ -103,4 +103,3 @@ This section is dedicated to individuals and companies who contribute more than 
 * [BlackHost](https://black.host) - Unmetered web hosting company
 * [Mythic Beasts](https://www.mythic-beasts.com) - No-nonsense hosting with excellent technical support
 * [Bunny.net](https://bunny.net) - The global content delivery platform that truly hops
-* [Fastly][https://www.fastly.com/fast-forward] - Powering the best of internet
