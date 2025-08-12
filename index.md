@@ -42,20 +42,20 @@ coinstallable together.
 
 ## Bug Reporting
 
-DEB.SURY.ORG has now public lightweight [issue tracker](https://github.com/oerdnj/deb.sury.org/issues)
-at github.com. Please report any bugs or feature requests for the repositories
+DEB.SURY.ORG has now public lightweight [issue tracker](https://codeberg.org/oerdnj/deb.sury.org/issues)
+at [CodeBerg](https://codeberg.org). Please report any bugs or feature requests for the repositories
 there, since my INBOX is a not very reliable way how to keep track on all issue
 since it has the tendency to grow number of unread messages to numbers over
 thousand...
 
 Also please excuse me if I don't respond to your email, my INBOX is really a
 mess and if you are not lucky, you might get stuck with other unread emails. So
-pretty please use new [issue tracker](https://github.com/oerdnj/deb.sury.org/issues).
+pretty please use new [issue tracker](https://codeberg.org/oerdnj/deb.sury.org/issues).
 
 ## Documentation
 
 The available documentation related to the packages and PPAs is hosted in the
-[Wiki](https://github.com/oerdnj/deb.sury.org/wiki).  Everybody can contribute,
+[Wiki](https://codeberg.org/oerdnj/deb.sury.org/wiki).  Everybody can contribute,
 so if you want to write more documentations on the PHP packages, you are
 certainly welcome to do so.
 
@@ -103,3 +103,4 @@ This section is dedicated to individuals and companies who contribute more than 
 * [BlackHost](https://black.host) - Unmetered web hosting company
 * [Mythic Beasts](https://www.mythic-beasts.com) - No-nonsense hosting with excellent technical support
 * [Bunny.net](https://bunny.net) - The global content delivery platform that truly hops
+* [Fastly][https://www.fastly.com/fast-forward] - Powering the best of internet
