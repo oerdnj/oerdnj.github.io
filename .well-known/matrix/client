@@ -1,14 +1,15 @@
 {
-    "m.homeserver": {
-        "base_url": "https://chat.sury.org"
-    },
-    "org.matrix.msc3575.proxy": {
-        "url": "https://chat.sury.org"
-    },
-    "org.matrix.msc4143.rtc_foci": [
-        {
-            "type": "livekit",
-            "livekit_service_url": "https://mrtc.sury.org"
-        }
-    ]
+  "m.homeserver": {
+    "base_url": "https://matrix.sury.org"
+  },
+  "org.matrix.msc2965.authentication": {
+    "account": "https://account.sury.org/account",
+    "issuer": "https://account.sury.org/"
+  },
+  "org.matrix.msc4143.rtc_foci": [
+    {
+      "livekit_service_url": "https://mrtc.sury.org",
+      "type": "livekit"
+    }
+  ]
 }
