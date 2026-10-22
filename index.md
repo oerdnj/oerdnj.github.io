@@ -74,9 +74,9 @@ Commercial support:
 
 Ways how to donate:
 
- * Become my regular patron on [Patreon](https://www.patreon.com/oerdnj)
- * Become my regular sponsor on [GitHub](https://github.com/sponsors/oerdnj)
- * Contact me via [email](mailto:ondrej@sury.org?Donate%20to%20DEB.SURY.ORG) if you need something more special (like invoice)
+ * Done on [OpenCollective](https://opencollective.com/debsuryorg)
+ * Donate on [GitHub](https://github.com/sponsors/oerdnj)
+ * Contact me via [email](mailto:ondrej@sury.org?Donate%20to%20DEB.SURY.ORG) if you need something more special (invoice, I am an EU VAT payer)
 
 ## Acknowledgements
 
