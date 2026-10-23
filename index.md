@@ -74,7 +74,7 @@ Commercial support:
 
 Ways how to donate:
 
- * Done on [OpenCollective](https://opencollective.com/debsuryorg)
+ * Donate on [OpenCollective](https://opencollective.com/debsuryorg)
  * Donate on [GitHub](https://github.com/sponsors/oerdnj)
  * Contact me via [email](mailto:ondrej@sury.org?Donate%20to%20DEB.SURY.ORG) if you need something more special (invoice, I am an EU VAT payer)
 
