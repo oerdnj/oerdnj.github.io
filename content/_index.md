@@ -50,7 +50,7 @@ in the unstable sooner or later.
 
 ### PHP Packages
 
-The main repository now contains PHP 5.6, PHP 7.0-7.4 and PHP 8.0-8.3
+The main repository now contains PHP 5.6, PHP 7.0-7.4 and PHP 8.0-8.6
 coinstallable together.
 
 #### Debian DPA
