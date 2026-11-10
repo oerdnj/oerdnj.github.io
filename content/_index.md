@@ -57,7 +57,7 @@ coinstallable together.
 
 * [packages.sury.org/php](https://packages.sury.org/php/) -- the main PHP repository for Debian and Ubuntu
 
-#### Freexian Repository for Debian Jessie, Stretch, Buster and Bullseye and Ubuntu Xenial
+#### Freexian Repository for Debian Stretch, Buster, Bullseye, Bookworm and Trixie and Ubuntu Bionic, Focal, Jammy, Noble and Resolute {#freexian-repository}
 
 * [PHP LTS by Freexian](https://www.freexian.com/lts/php/) -- PHP LTS repository prepared together with [Freexian](https://www.freexian.com) with commercial support
 
