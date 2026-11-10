@@ -12,6 +12,17 @@ description: Debian and Ubuntu packaging
 
 This is a home for packaging various software into Debian and Ubuntu.  Most notable package under DEB.SURY.ORG is the PHP packaging.
 
+## PHP LTS by Freexian
+
+Commercial long-term support for PHP.  PHP LTS is a service prepared together
+with [Freexian](https://www.freexian.com): Debian packages for multiple PHP
+releases on multiple Debian and Ubuntu releases, with dependable security
+support over an extended period of time.  If you use the PHP packages to run
+business, this is the way to get support and to support this project.
+
+[PHP LTS by Freexian](https://www.freexian.com/lts/php/)
+{.cta}
+
 ## Who am I?
 
 I am a Debian Developer since year 2000, and I have been packaging PHP for
