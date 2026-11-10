@@ -93,7 +93,7 @@ certainly welcome to do so.
 
 The PHP packaging is time consuming and I do this mostly in my free time.
 Please consider buying commercial support from Freexian if you use PHP packages
-to run business or donating donating if you find the PHP packages useful for
+to run business or donating if you find the PHP packages useful for
 your projects. 
 
 It also warms a heart to know that this project is useful.
