@@ -1,0 +1,76 @@
+# Builds the site with Hugo and publishes it to GitHub Pages.
+#
+# Needs the repository's Pages source set to "GitHub Actions"
+# (Settings -> Pages -> Build and deployment -> Source).
+name: Deploy to GitHub Pages
+
+on:
+  push:
+    branches: [master]
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+# One deployment at a time; let a running one finish.
+concurrency:
+  group: pages
+  cancel-in-progress: false
+
+env:
+  # Pinned, so a deploy never changes just because Hugo did.  To upgrade,
+  # change both values; the checksum of hugo_<version>_linux-amd64.deb is in
+  # hugo_<version>_checksums.txt on the Hugo release page.
+  HUGO_VERSION: 0.169.0
+  HUGO_SHA256: 1bdd08d3e2e6a093261360eacbd70f7bbd88eb0c53c578eff1531400555d4a94
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v7
+
+      - name: Install Hugo
+        run: |
+          deb="$RUNNER_TEMP/hugo_${HUGO_VERSION}_linux-amd64.deb"
+          curl -sSfL -o "$deb" "https://github.com/gohugoio/hugo/releases/download/v${HUGO_VERSION}/hugo_${HUGO_VERSION}_linux-amd64.deb"
+          echo "${HUGO_SHA256}  ${deb}" | sha256sum --check
+          sudo dpkg -i "$deb"
+
+      - name: Build
+        run: hugo --gc
+
+      # The site also carries the Matrix delegation for sury.org.  Refuse to
+      # publish a build that lost it.
+      - name: Check the build
+        run: |
+          test -s public/index.html
+          test -s public/404.html
+          jq -e '."m.server"' public/.well-known/matrix/server
+          jq -e '."m.homeserver".base_url' public/.well-known/matrix/client
+
+      - uses: actions/upload-pages-artifact@v5
+        with:
+          path: public
+          # Without this the action drops dot-directories, i.e. .well-known.
+          include-hidden-files: true
+
+  deploy:
+    needs: build
+    runs-on: ubuntu-latest
+    permissions:
+      pages: write
+      id-token: write
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    steps:
+      - id: deployment
+        uses: actions/deploy-pages@v5
+
+      - name: Check the published Matrix delegation
+        env:
+          PAGE_URL: ${{ steps.deployment.outputs.page_url }}
+        run: |
+          curl -sSf --retry 5 --retry-delay 10 --retry-all-errors \
+            "${PAGE_URL%/}/.well-known/matrix/server" | jq -e '."m.server"'

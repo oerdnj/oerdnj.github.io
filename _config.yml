@@ -1,18 +1,10 @@
-# Site settings
-title: DEB.SURY.ORG
-email: ondrej@sury.org
-tag_text: DEB.SURY.ORG
-description: Debian and Ubuntu packaging
-baseurl: "" # the subpath of your site, e.g. /blog
-url: "https://deb.sury.org" # the base hostname & protocol for your site
-github_username:  oerdnj
-
-font-awesome-include: true # make this false if you don't need font-awesome
-
-# Build settings
-markdown: kramdown
-
-include: [".well-known"]
-exclude: ["README.md"]
-
-theme: jekyll-theme-minimal
+# This is not the site configuration (that is hugo.toml).  Hugo ignores this
+# file.
+#
+# The site is built with Hugo by .github/workflows/pages.yml.  This file is a
+# safety catch for the case that the repository's GitHub Pages source is set
+# to "Deploy from a branch": GitHub would then run its built-in Jekyll over
+# the Hugo sources and publish a broken site without the .well-known/matrix
+# files.  The theme named below does not exist, so that Jekyll build fails
+# instead and the previously published site stays up.
+theme: this-site-is-built-with-hugo

@@ -1,0 +1,76 @@
+{{- $title := printf "%s — %s" .Title site.Title -}}
+{{- if .IsHome -}}
+  {{- $title = printf "%s — %s" site.Title site.Params.description -}}
+{{- else if eq .Kind "404" -}}
+  {{- $title = printf "Page not found — %s" site.Title -}}
+{{- end -}}
+{{- $description := .Description | default site.Params.description -}}
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>{{ $title }}</title>
+  <meta name="description" content="{{ $description }}">
+  <meta name="author" content="{{ site.Params.author }}">
+  <meta name="color-scheme" content="light dark">
+  <meta name="theme-color" content="#ffffff" media="(prefers-color-scheme: light)">
+  <meta name="theme-color" content="#15161a" media="(prefers-color-scheme: dark)">
+  <meta name="flattr:id" content="4zp53x">
+  {{- if eq .Kind "404" }}
+  <meta name="robots" content="noindex">
+  {{- else }}
+  <link rel="canonical" href="{{ .Permalink }}">
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="{{ site.Title }}">
+  <meta property="og:title" content="{{ $title }}">
+  <meta property="og:description" content="{{ $description }}">
+  <meta property="og:url" content="{{ .Permalink }}">
+  {{- end }}
+  <link rel="icon" href="/favicon.svg" type="image/svg+xml">
+  {{- /*
+    The fingerprint in the file name makes every stylesheet change a new URL,
+    so the CDN in front of the site can never pair a new page with an old
+    stylesheet.  Deliberately no integrity="" attribute: a CDN that re-minifies
+    assets would make the browser reject the file.
+  */}}
+  {{- with resources.Get "css/site.css" | minify | fingerprint }}
+  <link rel="stylesheet" href="{{ .RelPermalink }}">
+  {{- end }}
+</head>
+<body>
+  <a class="skip-link" href="#content">Skip to content</a>
+
+  <header class="site-header">
+    <div class="wrap">
+      <div class="identity">
+        {{- /* The site name is the page's main heading on the home page only. */}}
+        {{- if .IsHome }}
+        <h1 class="brand">{{ template "brand-link" . }}</h1>
+        {{- else }}
+        <p class="brand">{{ template "brand-link" . }}</p>
+        {{- end }}
+        <p class="tagline">{{ site.Params.description }}</p>
+      </div>
+      <a class="button" href="/#support">Support<span class="wide"> the project</span></a>
+    </div>
+    {{- block "nav" . }}{{ end }}
+  </header>
+
+  <main id="content" class="wrap">
+    {{- block "main" . }}{{ end }}
+  </main>
+
+  <footer class="site-footer">
+    <div class="wrap">
+      <p>{{ site.Title }} is maintained by {{ site.Params.author }}.</p>
+      <p><a href="{{ site.Params.source }}">Website source</a></p>
+    </div>
+  </footer>
+  {{- block "scripts" . }}{{ end }}
+</body>
+</html>
+
+{{- define "brand-link" -}}
+<a href="/"><img src="/favicon.svg" alt="" width="32" height="32">{{ site.Title }}</a>
+{{- end }}

@@ -1,0 +1,31 @@
+baseURL = "https://deb.sury.org/"
+title = "DEB.SURY.ORG"
+
+# A single-page site: only the home page and the 404 page are rendered.
+disableKinds = ["section", "taxonomy", "term", "rss", "sitemap"]
+
+# Do not pick up editor backup files from content/.
+ignoreFiles = ['~$']
+
+[params]
+  description = "Debian and Ubuntu packaging"
+  author = "Ondřej Surý"
+  source = "https://github.com/oerdnj/oerdnj.github.io"
+
+[markup.goldmark.parser.attribute]
+  # Allows a {.class} line after a list or paragraph in content/_index.md.
+  block = true
+
+# Minify the HTML, so that a plain `hugo` builds exactly what gets deployed.
+[minify]
+  minifyOutput = true
+
+[imaging]
+  resampleFilter = "Lanczos"
+  [imaging.jpeg]
+    quality = 90
+
+# Older versions look for templates in different places and would build an
+# empty site without complaint.
+[module.hugoVersion]
+  min = "0.146.0"

@@ -1,0 +1,57 @@
+{{- /* In-page navigation: one link per "## Heading" of content/_index.md. */ -}}
+{{- define "nav-items" }}
+  {{- range . }}
+    {{- if and (eq .Level 2) .ID }}
+        <li><a href="#{{ .ID }}">{{ .Title | plainify }}</a></li>
+    {{- end }}
+    {{- template "nav-items" .Headings }}
+  {{- end }}
+{{- end }}
+
+{{- define "nav" }}
+    <nav class="page-nav" aria-label="On this page">
+      <ul class="wrap">
+        {{- template "nav-items" .Fragments.Headings }}
+      </ul>
+    </nav>
+{{- end }}
+
+{{- define "main" }}
+    {{- /*
+      Wrap every "## Heading" block in its own <section> so the stylesheet can
+      lay the page out as a grid of boxes.  Each section gets the class
+      "section-ID", ID being the heading's anchor.  Splitting on the literal
+      "<h2 " is safe: the Markdown renderer gives every heading an id and
+      escapes "<" everywhere else.
+    */ -}}
+    {{- $parts := split .Content "<h2 " }}
+    <div class="sections">
+      {{- with index $parts 0 | strings.TrimSpace }}
+      <div class="section">
+        {{ . | safeHTML }}
+      </div>
+      {{- end }}
+      {{- range after 1 $parts }}
+        {{- $id := "" }}
+        {{- with findRESubmatch `^[^>]*\bid="([^"]+)"` . 1 }}
+          {{- $id = index (index . 0) 1 }}
+        {{- end }}
+      <section class="section{{ with $id }} section-{{ . }}{{ end }}"{{ with $id }} aria-labelledby="{{ . }}"{{ end }}>
+        {{ printf "<h2 %s" (strings.TrimSpace .) | safeHTML }}
+      </section>
+      {{- end }}
+    </div>
+{{- end }}
+
+{{- define "scripts" }}
+  <script>
+    // Show the sponsor logos in a different order on every visit, so that no
+    // sponsor is always the first one.  Without JavaScript the order is the
+    // one written in content/_index.md.
+    for (const list of document.querySelectorAll(".logos")) {
+      for (let left = list.children.length; left > 0; left--) {
+        list.append(list.children[Math.floor(Math.random() * left)]);
+      }
+    }
+  </script>
+{{- end }}

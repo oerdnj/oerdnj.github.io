@@ -1,8 +1,15 @@
 ---
-layout: default
+title: DEB.SURY.ORG
+description: Debian and Ubuntu packaging
+# Every "## Heading" below becomes one box of the page.  layouts/home.html
+# wraps each of them in <section class="section section-ID"> (ID is the heading
+# turned into an anchor, e.g. "bug-reporting") and assets/css/site.css arranges
+# the boxes by that class.  A new or renamed heading simply gets a full-width
+# box until the stylesheet is told otherwise.
 ---
 
 ## About
+
 This is a home for packaging various software into Debian and Ubuntu.  Most notable package under DEB.SURY.ORG is the PHP packaging.
 
 ## Who am I?
@@ -13,10 +20,17 @@ either my work or they are based on my work.  The PHP packages in my Ubuntu PPA
 and Debian DPA matches the official packages in Debian.  Basically I am saying
 that you can't get any closer than that.
 
-## News
+## Acknowledgements
 
-I publish the most important changes in the packaging and interesting news in
-dedicated Mastodon feed at [deb@sury.org](https://mastodon.rfc1925.org/@deb).
+This service would not exist without the support from companies that trust us and support the project directly or via [PHP LTS by Freexian](https://www.freexian.com/lts/php/). Many thanks to them!
+
+* [![TouchWeb - Comment éviter piratage PrestaShop](/images/TouchWeb.png)](https://www.touchweb.fr/)
+* [![MaxCluster](/images/Maxcluster.png)](https://maxcluster.de/)
+* [![Kinsta](/images/Kinsta_black.jpg)](https://kinsta.com)
+* [![Fastly - Building a better internet for all](/images/fastlyLogo-red-PNG.png)](https://www.fastly.com/fast-forward)
+* [![Internet Systems Consortium](/images/ISC-logo-for-web.png)](https://www.isc.org/support/)
+* [![HeroDevs](/images/herodevs.png)](https://www.herodevs.com/)
+{.logos}
 
 ## Packages
 
@@ -39,6 +53,11 @@ coinstallable together.
 #### Freexian Repository for Debian Jessie, Stretch, Buster and Bullseye and Ubuntu Xenial
 
 * [PHP LTS by Freexian](https://www.freexian.com/lts/php/) -- PHP LTS repository prepared together with [Freexian](https://www.freexian.com) with commercial support
+
+## News
+
+I publish the most important changes in the packaging and interesting news in
+dedicated Mastodon feed at [deb@sury.org](https://mastodon.rfc1925.org/@deb).
 
 ## Bug Reporting
 
@@ -68,26 +87,12 @@ your projects.
 
 It also warms a heart to know that this project is useful.
 
-Commercial support:
-
- * [PHP LTS by Freexian](https://www.freexian.com/lts/php/)
-
-Ways how to donate:
-
- * Donate on [OpenCollective](https://opencollective.com/debsuryorg)
- * Donate on [GitHub](https://github.com/sponsors/oerdnj)
- * Contact me via [email](mailto:ondrej@sury.org?Donate%20to%20DEB.SURY.ORG) if you need something more special (invoice, I am an EU VAT payer)
-
-## Acknowledgements
-
-This service would not exist without the support from companies that trust us and support the project directly or via [PHP LTS by Freexian](https://www.freexian.com/lts/php/). Many thanks to them!
-
-[![TouchWeb - Comment éviter piratage PrestaShop](/images/TouchWeb.png)](https://www.touchweb.fr/)
-[![MaxCluster](/images/Maxcluster.png)](https://maxcluster.de/)
-[![Kinsta](/images/Kinsta_black.jpg)](https://kinsta.com)
-[![Fastly - Building a better internet for all](/images/fastlyLogo-red-PNG.png)](https://www.fastly.com/fast-forward)
-[![Internet Systems Consortium](/images/ISC-logo-for-web.png)](https://www.isc.org/support/)
-[![HeroDevs](/images/herodevs.png)](https://www.herodevs.com/)
+* Commercial support:
+  * [PHP LTS by Freexian](https://www.freexian.com/lts/php/)
+* Ways how to donate:
+  * Donate on [OpenCollective](https://opencollective.com/debsuryorg)
+  * Donate on [GitHub](https://github.com/sponsors/oerdnj)
+  * Contact me via [email](mailto:ondrej@sury.org?Donate%20to%20DEB.SURY.ORG) if you need something more special (invoice, I am an EU VAT payer)
 
 ## Sponsors
 

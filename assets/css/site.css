@@ -1,0 +1,676 @@
+/*
+ * DEB.SURY.ORG stylesheet.
+ *
+ * Plain CSS on purpose: no preprocessor, no framework, no web fonts.
+ * Colours follow the visitor's light/dark preference.
+ *
+ * The page is a grid of boxes.  layouts/home.html wraps every "## Heading"
+ * block of content/_index.md in <section class="section section-ID">; the
+ * "Page grid" part below says where each box goes on a wide screen.  Boxes it
+ * does not mention span the full width, and on a narrow screen everything is
+ * one column in the order of the Markdown file.
+ */
+
+:root {
+  color-scheme: light dark;
+
+  --brand: #d70a53;        /* Debian red; decoration only, too light for text */
+  --bg: #ffffff;
+  --bg-soft: #f6f5f3;
+  --text: #1c1e22;
+  --text-soft: #5a5f69;
+  --border: #e2e0dc;
+  --link: #c4003a;
+  --link-hover: #8f002a;
+  --on-link: #ffffff;      /* text on a --link background */
+
+  --font-sans: system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue",
+    "Noto Sans", Arial, sans-serif;
+  --font-mono: ui-monospace, SFMono-Regular, "SF Mono", Menlo, Consolas,
+    "Liberation Mono", monospace;
+
+  --page: 72rem;           /* widest the content gets */
+  --measure: 68ch;         /* widest a line of running text gets */
+  --gutter: 1.25rem;
+}
+
+@media (min-width: 48rem) {
+  :root {
+    --gutter: 2rem;
+  }
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --bg: #15161a;
+    --bg-soft: #1f2127;
+    --text: #e7e5e2;
+    --text-soft: #a3a8b3;
+    --border: #32353e;
+    --link: #ff7a9c;
+    --link-hover: #ffb1c5;
+    --on-link: #15161a;
+  }
+}
+
+/* ---------------------------------------------------------------- Base */
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+html {
+  -webkit-text-size-adjust: 100%;
+  text-size-adjust: 100%;
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  html {
+    scroll-behavior: smooth;
+  }
+}
+
+body {
+  margin: 0;
+  background: var(--bg);
+  color: var(--text);
+  font: 1.0625rem/1.6 var(--font-sans);
+  overflow-wrap: break-word;
+}
+
+a {
+  color: var(--link);
+  text-decoration-thickness: 0.07em;
+  text-underline-offset: 0.2em;
+}
+
+a:hover {
+  color: var(--link-hover);
+}
+
+:focus-visible {
+  outline: 2px solid var(--link);
+  outline-offset: 2px;
+  border-radius: 2px;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+h1,
+h2,
+h3,
+h4 {
+  line-height: 1.25;
+  text-wrap: balance;
+}
+
+p,
+ul,
+ol,
+pre {
+  margin: 0 0 1.1rem;
+}
+
+ul,
+ol {
+  padding-left: 1.4rem;
+}
+
+li + li {
+  margin-top: 0.3rem;
+}
+
+li::marker {
+  color: var(--text-soft);
+}
+
+code,
+pre {
+  font-family: var(--font-mono);
+  font-size: 0.9em;
+}
+
+code {
+  padding: 0.1em 0.35em;
+  border-radius: 0.3em;
+  background: var(--bg-soft);
+}
+
+pre {
+  overflow-x: auto;
+  padding: 0.9rem 1rem;
+  border: 1px solid var(--border);
+  border-radius: 0.5rem;
+  background: var(--bg-soft);
+}
+
+pre code {
+  padding: 0;
+  background: none;
+  font-size: inherit;
+}
+
+.wrap {
+  max-width: calc(var(--page) + 2 * var(--gutter));
+  margin-inline: auto;
+  padding-inline: var(--gutter);
+}
+
+.skip-link {
+  position: absolute;
+  left: 0.5rem;
+  top: -4rem;
+  z-index: 1;
+  padding: 0.5rem 0.9rem;
+  border-radius: 0.4rem;
+  background: var(--link);
+  color: var(--on-link);
+  font-weight: 600;
+  text-decoration: none;
+}
+
+.skip-link:focus {
+  top: 0.5rem;
+  color: var(--on-link);
+}
+
+/* A link that looks like a button: the header button, and the only link of a
+   paragraph marked {.cta} in the Markdown. */
+.button,
+.cta a {
+  display: inline-block;
+  padding: 0.5rem 1.1rem;
+  border-radius: 999px;
+  background: var(--link);
+  color: var(--on-link);
+  font-size: 0.95rem;
+  font-weight: 650;
+  line-height: 1.4;
+  text-decoration: none;
+}
+
+.button:hover,
+.cta a:hover {
+  background: var(--link-hover);
+  color: var(--on-link);
+}
+
+/* -------------------------------------------------------------- Header */
+
+.site-header {
+  border-top: 4px solid var(--brand);
+}
+
+.site-header > .wrap {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  gap: 0.75rem 1.5rem;
+  padding-block: 1.1rem;
+}
+
+.identity {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 0.2rem 1.1rem;
+}
+
+.brand {
+  margin: 0;
+  font: 700 clamp(1.3rem, 1rem + 1.4vw, 1.6rem) / 1.2 var(--font-mono);
+  letter-spacing: 0.01em;
+}
+
+.brand a {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.6em;
+  color: var(--text);
+  text-decoration: none;
+}
+
+.brand img {
+  flex: none;
+  width: 1.25em;
+  height: 1.25em;
+}
+
+.tagline {
+  margin: 0;
+  color: var(--text-soft);
+  font-size: 0.95rem;
+  line-height: 1.4;
+}
+
+.site-header .button {
+  font-size: 0.9rem;
+  white-space: nowrap;
+}
+
+/* Shorten the header button's label where space is tight. */
+@media (max-width: 30rem) {
+  .button .wide {
+    display: none;
+  }
+}
+
+/* One line of links to the sections; scrolls sideways when it does not fit. */
+.page-nav {
+  border-block: 1px solid var(--border);
+  background: var(--bg-soft);
+}
+
+.page-nav ul {
+  display: flex;
+  gap: 1.6rem;
+  margin-block: 0;
+  padding-block: 0.6rem;
+  overflow-x: auto;
+  list-style: none;
+  white-space: nowrap;
+  scrollbar-width: thin;
+}
+
+.page-nav li {
+  margin: 0;
+}
+
+.page-nav a {
+  color: var(--text-soft);
+  font-size: 0.875rem;
+  text-decoration: none;
+}
+
+.page-nav a:hover {
+  color: var(--link);
+}
+
+/* ----------------------------------------------------------- Page grid */
+
+.sections {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr);
+  gap: 2.75rem 3rem;
+  padding-block: 2.5rem 4rem;
+}
+
+.section {
+  grid-column: 1 / -1;
+  min-width: 0;
+}
+
+@media (min-width: 60rem) {
+  .sections {
+    grid-template-columns: repeat(12, minmax(0, 1fr));
+  }
+
+  /* Top row: the introduction on the left, the highlighted box on the right. */
+  .section-about {
+    grid-area: 1 / 1 / auto / span 7;
+  }
+
+  .section-who-am-i {
+    grid-area: 2 / 1 / auto / span 7;
+  }
+
+  .section-php-lts-by-freexian {
+    grid-area: 1 / 8 / span 2 / -1;
+  }
+
+  /* Three boxes side by side. */
+  .section-news,
+  .section-bug-reporting,
+  .section-documentation {
+    grid-column: span 4;
+  }
+}
+
+/* ------------------------------------------------------------ Sections */
+
+.section > :first-child {
+  margin-top: 0;
+}
+
+.section > :last-child {
+  margin-bottom: 0;
+}
+
+.section > p,
+.section > ul,
+.section > ol {
+  max-width: var(--measure);
+}
+
+.section h2,
+.section h3,
+.section h4 {
+  scroll-margin-top: 1.5rem;
+}
+
+.section h2 {
+  margin: 0 0 0.8rem;
+  font-size: 1.5rem;
+  letter-spacing: -0.01em;
+}
+
+/* Short brand-coloured rule above every section heading. */
+.section h2::before {
+  content: "";
+  display: block;
+  width: 2.25rem;
+  height: 3px;
+  margin-bottom: 0.8rem;
+  border-radius: 2px;
+  background: var(--brand);
+}
+
+.section h3 {
+  margin: 1.6rem 0 0.5rem;
+  font-size: 1.15rem;
+}
+
+.section h4 {
+  margin: 1.4rem 0 0.5rem;
+  color: var(--text-soft);
+  font-size: 0.95rem;
+  font-weight: 600;
+}
+
+/* The highlighted box. */
+.section-php-lts-by-freexian {
+  display: flex;
+  flex-direction: column;
+  padding: 1.75rem;
+  border-radius: 1rem;
+  background: linear-gradient(140deg, #d70a53, #a5003a);
+  color: #ffffff;
+}
+
+.section-php-lts-by-freexian h2::before {
+  background: rgb(255 255 255 / 0.55);
+}
+
+.section-php-lts-by-freexian a {
+  color: inherit;
+}
+
+/* The default focus ring is the same red as the box. */
+.section-php-lts-by-freexian :focus-visible {
+  outline-color: #ffffff;
+}
+
+.section-php-lts-by-freexian .cta {
+  margin-top: auto;
+  padding-top: 0.4rem;
+}
+
+.section-php-lts-by-freexian .cta a {
+  background: #ffffff;
+  color: #a5003a;
+}
+
+.section-php-lts-by-freexian .cta a:hover {
+  background: #ffe1ea;
+  color: #7d002c;
+}
+
+/*
+ * Packages.  A list directly under an <h4> is one package repository; show
+ * it as a card.  On a wide screen the cards stand two to a row: every h4 and
+ * its list are pinned to the same column, and "dense" placement lets each
+ * column start again from the first free row, so the headings share one row
+ * and the cards the next.
+ */
+.section h4 + ul {
+  max-width: none;
+  margin-bottom: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.section h4 + ul > li {
+  height: 100%;
+  padding: 0.8rem 1rem;
+  border: 1px solid var(--border);
+  border-left: 3px solid var(--brand);
+  border-radius: 0.5rem;
+  background: var(--bg-soft);
+}
+
+@media (min-width: 48rem) {
+  .section-packages {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    grid-auto-flow: row dense;
+    column-gap: 1.25rem;
+  }
+
+  .section-packages > * {
+    grid-column: 1 / -1;
+  }
+
+  .section-packages > h4 {
+    align-self: end;
+  }
+
+  .section-packages > h4:nth-of-type(odd),
+  .section-packages > h4:nth-of-type(odd) + ul {
+    grid-column: 1;
+  }
+
+  .section-packages > h4:nth-of-type(even),
+  .section-packages > h4:nth-of-type(even) + ul {
+    grid-column: 2;
+  }
+}
+
+/*
+ * Support: the text, then one list whose top-level items are the groups
+ * ("Commercial support:", "Ways how to donate:") with the actual options
+ * nested under them.  On a wide screen that list stands beside the text.
+ */
+.section-support > ul {
+  max-width: none;
+  padding: 0;
+  list-style: none;
+}
+
+.section-support > ul > li {
+  font-weight: 600;
+}
+
+.section-support > ul > li + li {
+  margin-top: 1.1rem;
+}
+
+.section-support > ul > li > ul {
+  margin: 0.4rem 0 0;
+  font-weight: 400;
+  list-style: disc;
+}
+
+@media (min-width: 48rem) {
+  .section-support {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    column-gap: 3rem;
+  }
+
+  .section-support > * {
+    grid-column: 1;
+  }
+
+  .section-support > h2 {
+    grid-column: 1 / -1;
+  }
+
+  /* Row 1 is the heading.  The list starts level with the first paragraph
+     and spans far enough to pass any number of paragraphs beside it. */
+  .section-support > ul {
+    grid-column: 2;
+    grid-row: 2 / span 20;
+  }
+}
+
+/* Acknowledgements: a panel of its own, right under the introduction. */
+.section-acknowledgements {
+  padding: 1.25rem;
+  border-radius: 1rem;
+  background: var(--bg-soft);
+}
+
+@media (min-width: 48rem) {
+  .section-acknowledgements {
+    padding: 1.6rem 1.75rem 1.75rem;
+  }
+}
+
+/*
+ * Sponsor logo wall: a Markdown list of linked images marked {.logos}.
+ * Tiles stay white in dark mode because the logos are drawn for a light
+ * background.  The order is shuffled on every visit (layouts/home.html).
+ */
+.logos {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 0.9rem;
+  max-width: none !important;
+  margin-top: 1.4rem;
+  padding: 0;
+  list-style: none;
+}
+
+@media (min-width: 36rem) {
+  .logos {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
+}
+
+/* Wide screen: one row, however many logos there are. */
+@media (min-width: 60rem) {
+  .logos {
+    grid-template-columns: none;
+    grid-auto-columns: minmax(0, 1fr);
+    grid-auto-flow: column;
+  }
+}
+
+.logos li {
+  margin: 0;
+}
+
+.logos a {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 6.5rem;
+  padding: 1rem 1.1rem;
+  border: 1px solid var(--border);
+  border-radius: 0.75rem;
+  background: #ffffff;
+}
+
+.logos a:hover {
+  border-color: var(--link);
+}
+
+.logos img {
+  display: block;
+  width: auto;
+  height: auto;
+  max-width: 100%;
+  max-height: 100%;
+}
+
+/* Sponsors: the list of names flows into columns. */
+.section-sponsors > ul {
+  max-width: none;
+}
+
+@media (min-width: 36rem) {
+  .section-sponsors > ul {
+    columns: 2;
+    column-gap: 3rem;
+  }
+}
+
+@media (min-width: 60rem) {
+  .section-sponsors > ul {
+    columns: 3;
+  }
+}
+
+.section-sponsors li {
+  break-inside: avoid;
+}
+
+/* ---------------------------------------------------------- 404 page */
+
+.not-found {
+  padding-block: 3rem 5rem;
+}
+
+.not-found h1 {
+  margin: 0 0 1rem;
+  font-size: 2rem;
+  letter-spacing: -0.015em;
+}
+
+/* -------------------------------------------------------------- Footer */
+
+.site-footer {
+  border-top: 1px solid var(--border);
+  color: var(--text-soft);
+  font-size: 0.9rem;
+}
+
+.site-footer .wrap {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  gap: 0.5rem 1.5rem;
+  padding-block: 1.75rem 2.5rem;
+}
+
+.site-footer p {
+  margin: 0;
+}
+
+/* --------------------------------------------------------------- Print */
+
+@media print {
+  .skip-link,
+  .site-header .button,
+  .page-nav {
+    display: none;
+  }
+
+  .site-header {
+    border-top: 0;
+  }
+
+  .section h2 {
+    break-after: avoid;
+  }
+
+  /* Browsers do not print backgrounds, which would leave white text on white
+     paper in the highlighted box. */
+  .section-php-lts-by-freexian {
+    border: 1px solid;
+    background: none;
+    color: inherit;
+  }
+
+  .section-php-lts-by-freexian .cta a {
+    padding: 0;
+    color: inherit;
+    text-decoration: underline;
+  }
+}
