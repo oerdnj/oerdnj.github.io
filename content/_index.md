@@ -27,9 +27,9 @@ business, this is the way to get support and to support this project.
 
 I am a Debian Developer since year 2000, and I have been packaging PHP for
 Debian since PHP 5.  That means the official packages in Debian and Ubuntu are
-either my work or they are based on my work.  The PHP packages in my Ubuntu PPA
-and Debian DPA matches the official packages in Debian.  Basically I am saying
-that you can't get any closer than that.
+either my work or they are based on my work.  The PHP packages in my Debian DPA
+matches the official packages in Debian.  Basically I am saying that you can't
+get any closer than that.
 
 ## Acknowledgements
 
@@ -50,16 +50,12 @@ in the unstable sooner or later.
 
 ### PHP Packages
 
-The main repositories now contain both PHP 5.6, PHP 7.0-7.4 and PHP 8.0-8.3
+The main repository now contains PHP 5.6, PHP 7.0-7.4 and PHP 8.0-8.3
 coinstallable together.
-
-#### Ubuntu PPA
-
-* [ppa:ondrej/php](https://launchpad.net/~ondrej/+archive/ubuntu/php/) -- the main PHP repository
 
 #### Debian DPA
 
-* [packages.sury.org/php](https://packages.sury.org/php/) -- the main PHP repository for Debian
+* [packages.sury.org/php](https://packages.sury.org/php/) -- the main PHP repository for Debian and Ubuntu
 
 #### Freexian Repository for Debian Jessie, Stretch, Buster and Bullseye and Ubuntu Xenial
 
