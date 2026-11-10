@@ -103,7 +103,7 @@ It also warms a heart to know that this project is useful.
 
 ## Sponsors
 
-This section is dedicated to individuals and companies who contribute more than $100 a month or made a significant contribution in a given calendar year, see the [Patreon](https://www.patreon.com/oerdnj) or [GitHub](https://github.com/sponsors/oerdnj) tiers.
+This section is dedicated to individuals and companies who contribute more than $100 a month or made a significant contribution in a given calendar year.
 
 * [Laravel](https://laravel.com) - The PHP Framework for Web Artisans
 * [Stepan Kocourek](https://kocourek.uk)
