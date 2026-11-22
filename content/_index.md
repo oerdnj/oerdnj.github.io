@@ -45,9 +45,6 @@ This service would not exist without the support from companies that trust us an
 
 ## Packages
 
-All packaging work is either done directly in the Debian unstable, or it will be
-in the unstable sooner or later.
-
 ### PHP Packages
 
 The main repository now contains PHP 5.6, PHP 7.0-7.4 and PHP 8.0-8.6
@@ -60,6 +57,12 @@ coinstallable together.
 #### Freexian Repository for Debian Stretch, Buster, Bullseye, Bookworm and Trixie and Ubuntu Bionic, Focal, Jammy, Noble and Resolute {#freexian-repository}
 
 * [PHP LTS by Freexian](https://www.freexian.com/lts/php/) -- PHP LTS repository prepared together with [Freexian](https://www.freexian.com) with commercial support
+
+### Apache2 Packages
+
+#### Debian DPA {#apache2-debian-dpa}
+
+* [packages.sury.org/apache2](https://packages.sury.org/apache2/) -- the main Apache2 repository for Debian and Ubuntu
 
 ## Supported Releases
 
