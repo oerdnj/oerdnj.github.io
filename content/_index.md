@@ -71,8 +71,7 @@ The main repository follows the life cycle of the distributions themselves:
 * Debian -- stable, oldstable (if it exists) and the releases covered by [Debian LTS](https://wiki.debian.org/LTS)
 * Ubuntu -- LTS releases only, for the [Standard Support](https://ubuntu.com/about/release-cycle) period
 
-The table shows when the support in the main repository ends.  After that the
-packages are available from [PHP LTS by Freexian](https://www.freexian.com/lts/php/).
+The table shows when the support in the main repository ends.  After that the packages are available from [PHP LTS by Freexian](https://www.freexian.com/lts/php/).
 
 {{< releases >}}
 

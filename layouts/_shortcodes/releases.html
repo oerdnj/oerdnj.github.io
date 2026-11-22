@@ -41,7 +41,7 @@
           {{- if .until }}
           {{- /* The cell shows the month; the exact day is in the hint. */}}
           {{- $until := time.AsTime .until }}
-        <td class="here" title="{{ $where }}: packages.sury.org until {{ $until | time.Format "2 January 2006" }}"><a href="{{ index $data.sources (lower .distribution) }}" tabindex="{{ $tab }}">{{ $until | time.Format "January 2006" }}</a></td>
+        <td class="here" title="{{ $where }}: {{ site.Title }} until {{ $until | time.Format "2 January 2006" }}"><a href="{{ index $data.sources (lower .distribution) }}" tabindex="{{ $tab }}">{{ $until | time.Format "January 2006" }}</a></td>
           {{- else if $lts }}
         <td class="lts" title="{{ $where }}: PHP LTS by Freexian"><a href="{{ $data.lts_url }}" tabindex="{{ $tab }}">PHP LTS</a></td>
           {{- else }}
@@ -54,7 +54,7 @@
   </table>
 </div>
 <ul class="releases-legend">
-  <li><span class="swatch here"></span>packages.sury.org, until the month shown</li>
+  <li><span class="swatch here"></span>{{ site.Title }}</li>
   <li><span class="swatch lts"></span>PHP LTS by Freexian</li>
   <li><span class="swatch none">–</span>{{ $data.not_available }}</li>
 </ul>

@@ -29,8 +29,7 @@
   --font-mono: ui-monospace, SFMono-Regular, "SF Mono", Menlo, Consolas,
     "Liberation Mono", monospace;
 
-  --page: 72rem;           /* widest the content gets */
-  --measure: 68ch;         /* widest a line of running text gets */
+  --page: 76rem;           /* widest the content gets */
   --gutter: 1.25rem;
 }
 
@@ -114,6 +113,10 @@ ul,
 ol,
 pre {
   margin: 0 0 1.1rem;
+}
+
+p {
+  text-wrap: pretty;
 }
 
 ul,
@@ -342,12 +345,6 @@ pre code {
   margin-bottom: 0;
 }
 
-.section > p,
-.section > ul,
-.section > ol {
-  max-width: var(--measure);
-}
-
 .section h2,
 .section h3,
 .section h4 {
@@ -429,7 +426,6 @@ pre code {
  * and the cards the next.
  */
 .section h4 + ul {
-  max-width: none;
   margin-bottom: 0;
   padding: 0;
   list-style: none;
@@ -477,7 +473,6 @@ pre code {
  * nested under them.  On a wide screen that list stands beside the text.
  */
 .section-support > ul {
-  max-width: none;
   padding: 0;
   list-style: none;
 }
@@ -541,7 +536,6 @@ pre code {
   display: grid;
   grid-template-columns: repeat(2, minmax(0, 1fr));
   gap: 0.9rem;
-  max-width: none !important;
   margin-top: 1.4rem;
   padding: 0;
   list-style: none;
@@ -702,7 +696,6 @@ pre code {
   display: flex;
   flex-wrap: wrap;
   gap: 0.3rem 1.5rem;
-  max-width: none !important;
   margin: 0.9rem 0 0;
   padding: 0;
   color: var(--text-soft);
@@ -734,10 +727,6 @@ pre code {
 }
 
 /* Sponsors: the list of names flows into columns. */
-.section-sponsors > ul {
-  max-width: none;
-}
-
 @media (min-width: 36rem) {
   .section-sponsors > ul {
     columns: 2;
