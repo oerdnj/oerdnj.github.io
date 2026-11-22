@@ -3,9 +3,13 @@
   from data/releases.toml.
 
   Nothing here depends on today's date.  A release that has an "until" date in
-  the data shows that date in every row; one without it says "PHP LTS", or
-  shows a dash where PHP LTS by Freexian does not offer that PHP version on
-  that release.
+  the data shows that date in every row, as month and year, linked to the distribution's own page
+  about its releases; one without it says "PHP LTS", or shows a dash where PHP
+  LTS by Freexian does not offer that PHP version on that release.
+
+  The table holds more than a hundred links that go to three places.  Only the
+  ones in the first row can be reached with the Tab key, one per column;
+  walking through all of them would help nobody.
 */ -}}
 {{- $data := hugo.Data.releases -}}
 {{- $distributions := slice -}}
@@ -26,7 +30,8 @@
       </tr>
     </thead>
     <tbody>
-      {{- range $php := $data.php }}
+      {{- range $row, $php := $data.php }}
+      {{- $tab := cond (eq $row 0) "0" "-1" }}
       <tr>
         <th scope="row">{{ $php }}</th>
         {{- range $data.release }}
@@ -34,11 +39,11 @@
           {{- $skip := .not_in_lts | default (slice) }}
           {{- $lts := not (or (in $data.not_in_lts $php) (in $skip $php)) }}
           {{- if .until }}
-        <td class="here" title="{{ $where }}: packages.sury.org until {{ .until }}">{{ .until }}</td>
+          {{- /* The cell shows the month; the exact day is in the hint. */}}
+          {{- $until := time.AsTime .until }}
+        <td class="here" title="{{ $where }}: packages.sury.org until {{ $until | time.Format "2 January 2006" }}"><a href="{{ index $data.sources (lower .distribution) }}" tabindex="{{ $tab }}">{{ $until | time.Format "January 2006" }}</a></td>
           {{- else if $lts }}
-        {{- /* tabindex: one link per column is in reach of the keyboard through
-               the text above the table; sixty more tab stops would not help. */}}
-        <td class="lts" title="{{ $where }}: PHP LTS by Freexian"><a href="{{ $data.lts_url }}" tabindex="-1">PHP LTS</a></td>
+        <td class="lts" title="{{ $where }}: PHP LTS by Freexian"><a href="{{ $data.lts_url }}" tabindex="{{ $tab }}">PHP LTS</a></td>
           {{- else }}
         <td class="none" title="{{ $where }}: {{ $data.not_available }}">–</td>
           {{- end }}
@@ -49,7 +54,7 @@
   </table>
 </div>
 <ul class="releases-legend">
-  <li><span class="swatch here"></span>packages.sury.org, until the day shown</li>
+  <li><span class="swatch here"></span>packages.sury.org, until the month shown</li>
   <li><span class="swatch lts"></span>PHP LTS by Freexian</li>
   <li><span class="swatch none">–</span>{{ $data.not_available }}</li>
 </ul>

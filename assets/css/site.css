@@ -641,6 +641,9 @@ pre code {
   padding: 0.4rem 0.35rem;
   border-radius: 3px;
   text-align: center;
+}
+
+.releases th {
   white-space: nowrap;
 }
 
@@ -681,13 +684,14 @@ pre code {
   background: color-mix(in srgb, var(--lts) var(--tint), transparent);
 }
 
-.releases .lts a {
+/* Every date and every "PHP LTS" is a link; keep them quiet until pointed at. */
+.releases td a {
   color: inherit;
-  text-decoration: none;
+  text-decoration-color: color-mix(in srgb, currentColor 30%, transparent);
 }
 
-.releases .lts a:hover {
-  text-decoration: underline;
+.releases td a:hover {
+  text-decoration-color: currentColor;
 }
 
 .releases .none {

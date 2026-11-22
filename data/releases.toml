@@ -16,12 +16,20 @@ php = ["5.6", "7.0", "7.1", "7.2", "7.3", "7.4", "8.0", "8.1", "8.2", "8.3", "8.
 # the time between a new PHP version reaching the main repository and PHP LTS.
 not_in_lts = []
 
+# Where a date in the table links to, by distribution (in lower case).  These
+# pages are for the reader; the dates themselves come from distro-info-data
+# only (see "until" below), even where a page words them differently.
+[sources]
+debian = "https://www.debian.org/releases/"
+ubuntu = "https://ubuntu.com/about/release-cycle"
+
 # One entry per release, in the order of the table's columns.
 #
 #   until        The last day of support in the main repository: the end of
 #                Debian LTS ("eol-lts" in debian.csv of Debian's
 #                distro-info-data) or of Ubuntu Standard Support ("eol" in
-#                ubuntu.csv).  Nothing changes by itself on that day: when a
+#                ubuntu.csv).  Written as YYYY-MM-DD here; the table shows it
+#                as month and year.  Nothing changes by itself on that day: when a
 #                release leaves the main repository, delete its "until" line
 #                and the column says "PHP LTS" instead of the date.
 #   not_in_lts   PHP versions that PHP LTS by Freexian does not offer on this
