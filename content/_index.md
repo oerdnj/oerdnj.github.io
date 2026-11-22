@@ -61,6 +61,18 @@ coinstallable together.
 
 * [PHP LTS by Freexian](https://www.freexian.com/lts/php/) -- PHP LTS repository prepared together with [Freexian](https://www.freexian.com) with commercial support
 
+## Supported Releases
+
+The main repository follows the life cycle of the distributions themselves:
+
+* Debian -- stable, oldstable (if it exists) and the releases covered by [Debian LTS](https://wiki.debian.org/LTS)
+* Ubuntu -- LTS releases only, for the [Standard Support](https://ubuntu.com/about/release-cycle) period
+
+The table shows the last day of support in the main repository.  After that day the
+packages are available from [PHP LTS by Freexian](https://www.freexian.com/lts/php/).
+
+{{< releases >}}
+
 ## News
 
 I publish the most important changes in the packaging and interesting news in

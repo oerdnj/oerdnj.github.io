@@ -1,0 +1,55 @@
+{{- /*
+  The "Supported Releases" table: PHP versions down, releases across, drawn
+  from data/releases.toml.
+
+  Nothing here depends on today's date.  A release that has an "until" date in
+  the data shows that date in every row; one without it says "PHP LTS", or
+  shows a dash where PHP LTS by Freexian does not offer that PHP version on
+  that release.
+*/ -}}
+{{- $data := hugo.Data.releases -}}
+{{- $distributions := slice -}}
+{{- range $data.release }}{{ $distributions = $distributions | append .distribution }}{{ end -}}
+<div class="releases-scroll" role="region" aria-label="Supported releases" tabindex="0">
+  <table class="releases">
+    <thead>
+      <tr>
+        <th rowspan="2" scope="col">PHP</th>
+        {{- range $name := uniq $distributions }}
+        <th colspan="{{ len (where $data.release "distribution" $name) }}" scope="colgroup">{{ $name }}</th>
+        {{- end }}
+      </tr>
+      <tr>
+        {{- range $data.release }}
+        <th scope="col">{{ .version }} <code>{{ .codename }}</code></th>
+        {{- end }}
+      </tr>
+    </thead>
+    <tbody>
+      {{- range $php := $data.php }}
+      <tr>
+        <th scope="row">{{ $php }}</th>
+        {{- range $data.release }}
+          {{- $where := printf "PHP %s on %s %s" $php .distribution .version }}
+          {{- $skip := .not_in_lts | default (slice) }}
+          {{- $lts := not (or (in $data.not_in_lts $php) (in $skip $php)) }}
+          {{- if .until }}
+        <td class="here" title="{{ $where }}: packages.sury.org until {{ .until }}">{{ .until }}</td>
+          {{- else if $lts }}
+        {{- /* tabindex: one link per column is in reach of the keyboard through
+               the text above the table; sixty more tab stops would not help. */}}
+        <td class="lts" title="{{ $where }}: PHP LTS by Freexian"><a href="{{ $data.lts_url }}" tabindex="-1">PHP LTS</a></td>
+          {{- else }}
+        <td class="none" title="{{ $where }}: {{ $data.not_available }}">–</td>
+          {{- end }}
+        {{- end }}
+      </tr>
+      {{- end }}
+    </tbody>
+  </table>
+</div>
+<ul class="releases-legend">
+  <li><span class="swatch here"></span>packages.sury.org, until the day shown</li>
+  <li><span class="swatch lts"></span>PHP LTS by Freexian</li>
+  <li><span class="swatch none">–</span>{{ $data.not_available }}</li>
+</ul>

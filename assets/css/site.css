@@ -589,6 +589,146 @@ pre code {
   max-height: 100%;
 }
 
+/*
+ * Supported releases: a grid of PHP versions by releases, drawn by
+ * layouts/_shortcodes/releases.html.  Two colours tell the two repositories
+ * apart; every cell also says in words what it is, so colour is never the
+ * only cue.  The pair was checked for colour-blind separation on both the
+ * light and the dark background.
+ */
+.releases-scroll {
+  margin-top: 1.4rem;
+  overflow-x: auto;
+}
+
+.releases,
+.releases-legend {
+  --here: #008300;         /* packages.sury.org */
+  --lts: #2a78d6;          /* PHP LTS by Freexian */
+}
+
+.releases {
+  --tint: 16%;             /* how much of the colour a cell's background gets */
+
+  width: 100%;
+  min-width: 56rem;        /* narrower than this, the table scrolls sideways */
+  table-layout: fixed;     /* equal columns, like a grid */
+  border-collapse: separate;
+  border-spacing: 2px;
+  font-size: 0.78rem;
+  font-variant-numeric: tabular-nums;
+  line-height: 1.3;
+}
+
+@media (prefers-color-scheme: dark) {
+  .releases,
+  .releases-legend {
+    --here: #0ca30c;
+    --lts: #3987e5;
+  }
+
+  .releases {
+    --tint: 32%;
+  }
+}
+
+.releases thead tr:first-child th:first-child {
+  width: 3.4rem;
+}
+
+.releases th,
+.releases td {
+  padding: 0.4rem 0.35rem;
+  border-radius: 3px;
+  text-align: center;
+  white-space: nowrap;
+}
+
+.releases thead th {
+  color: var(--text-soft);
+  font-weight: 600;
+  vertical-align: bottom;
+}
+
+.releases thead tr:first-child th {
+  color: var(--text);
+  font-size: 0.85rem;
+}
+
+.releases code {
+  display: block;
+  padding: 0;
+  background: none;
+  font-size: 0.72rem;
+  font-weight: 400;
+}
+
+/* The PHP version stays in view while the table scrolls sideways. */
+.releases tbody th {
+  position: sticky;
+  left: 0;
+  padding-right: 0.7rem;
+  background: var(--bg);
+  font-weight: 600;
+  text-align: right;
+}
+
+.releases .here {
+  background: color-mix(in srgb, var(--here) var(--tint), transparent);
+}
+
+.releases .lts {
+  background: color-mix(in srgb, var(--lts) var(--tint), transparent);
+}
+
+.releases .lts a {
+  color: inherit;
+  text-decoration: none;
+}
+
+.releases .lts a:hover {
+  text-decoration: underline;
+}
+
+.releases .none {
+  color: var(--text-soft);
+}
+
+.releases-legend {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.3rem 1.5rem;
+  max-width: none !important;
+  margin: 0.9rem 0 0;
+  padding: 0;
+  color: var(--text-soft);
+  font-size: 0.85rem;
+  list-style: none;
+}
+
+.releases-legend li {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  margin: 0;
+}
+
+.releases-legend .swatch {
+  width: 0.9rem;
+  height: 0.9rem;
+  border-radius: 3px;
+  text-align: center;
+  line-height: 0.9rem;
+}
+
+.releases-legend .swatch.here {
+  background: var(--here);
+}
+
+.releases-legend .swatch.lts {
+  background: var(--lts);
+}
+
 /* Sponsors: the list of names flows into columns. */
 .section-sponsors > ul {
   max-width: none;

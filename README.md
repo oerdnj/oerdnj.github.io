@@ -19,6 +19,9 @@ All of the text is in [`content/_index.md`](content/_index.md).
   the list that ends with `{.logos}`.  The logos are shown in a random order on
   every visit.  Images wider than 800px are scaled down when the site is built.
 * A sponsor without a logo: add a line to the list under "Sponsors".
+* A new release or PHP version: edit `data/releases.toml`, which feeds the
+  grid under "Supported Releases".  When a release leaves the main
+  repository, delete its `until` line there and its column says "PHP LTS".
 
 ## Preview
 

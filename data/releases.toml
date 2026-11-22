@@ -1,0 +1,90 @@
+# The data behind the "Supported Releases" table, which is drawn by
+# layouts/_shortcodes/releases.html.
+
+# Where a "PHP LTS" cell links to.
+lts_url = "https://www.freexian.com/lts/php/"
+
+# What a dash in the table means; shown in the legend and when pointing at
+# such a cell.
+not_available = "not available, needs OpenSSL 3"
+
+# PHP versions in the main repository (packages.sury.org).  Every one of them
+# is built for every release the main repository supports.
+php = ["5.6", "7.0", "7.1", "7.2", "7.3", "7.4", "8.0", "8.1", "8.2", "8.3", "8.4", "8.5", "8.6"]
+
+# PHP versions that PHP LTS by Freexian does not offer on any release yet, for
+# the time between a new PHP version reaching the main repository and PHP LTS.
+not_in_lts = []
+
+# One entry per release, in the order of the table's columns.
+#
+#   until        The last day of support in the main repository: the end of
+#                Debian LTS ("eol-lts" in debian.csv of Debian's
+#                distro-info-data) or of Ubuntu Standard Support ("eol" in
+#                ubuntu.csv).  Nothing changes by itself on that day: when a
+#                release leaves the main repository, delete its "until" line
+#                and the column says "PHP LTS" instead of the date.
+#   not_in_lts   PHP versions that PHP LTS by Freexian does not offer on this
+#                release, as in the table on https://www.freexian.com/lts/php/
+#                (which can lag behind: PHP 8.6 was in PHP LTS before the
+#                table there listed it)
+#                PHP 8.4 and newer need OpenSSL >= 3, so every new PHP
+#                version also goes on the lists of Debian 9 and Ubuntu
+#                18.04.
+
+[[release]]
+distribution = "Debian"
+version = "9"
+codename = "stretch"
+not_in_lts = ["8.4", "8.5", "8.6"]
+
+[[release]]
+distribution = "Debian"
+version = "10"
+codename = "buster"
+
+[[release]]
+distribution = "Debian"
+version = "11"
+codename = "bullseye"
+
+[[release]]
+distribution = "Debian"
+version = "12"
+codename = "bookworm"
+until = "2028-06-30"
+
+[[release]]
+distribution = "Debian"
+version = "13"
+codename = "trixie"
+until = "2030-06-30"
+
+[[release]]
+distribution = "Ubuntu"
+version = "18.04"
+codename = "bionic"
+not_in_lts = ["8.4", "8.5", "8.6"]
+
+[[release]]
+distribution = "Ubuntu"
+version = "20.04"
+codename = "focal"
+
+[[release]]
+distribution = "Ubuntu"
+version = "22.04"
+codename = "jammy"
+until = "2027-06-01"
+
+[[release]]
+distribution = "Ubuntu"
+version = "24.04"
+codename = "noble"
+until = "2029-05-31"
+
+[[release]]
+distribution = "Ubuntu"
+version = "26.04"
+codename = "resolute"
+until = "2031-05-29"
